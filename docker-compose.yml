@@ -1,0 +1,14 @@
+# Use root/example as user/password credentials
+version: '3'
+
+services:
+
+   web:
+    image: php:7.2.2-apache
+    container_name: php_web
+    volumes:
+      - ./php/:/var/www/html/
+    ports:
+      - "8100:80"
+    stdin_open: true
+    tty: true
